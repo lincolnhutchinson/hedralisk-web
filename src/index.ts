@@ -1,13 +1,16 @@
 import express from 'express';
 import * as throwbone from 'throwbone';
+import pug from 'pug';
 
 const app: express.Application = express();
 const port: number = 3000;
 
 const diceThrow = throwbone.rollDice("3");
 
+const compiledIndex = pug.compileFile('./views/index.pug');
+
 app.get('/', (_req, _res) => {
-	_res.send(`Hedralisk Time Baybee. Here's a dice roll: ${diceThrow}`);
+	_res.send(compiledIndex({ roll: diceThrow }));
 });
 
 app.listen(port, () => {
