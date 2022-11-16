@@ -1,0 +1,90 @@
+:root {
+	--bg-gray: #202020;
+	--bg-light-gray: #333333;
+	--bg-color: #1C523B;
+	--color-lighter: #558973;
+	--color-light: #336952;
+	--color-dark: #0A3925;
+	--color-darker: #001E11;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: "Courier New", monospace;
+}
+
+body { 
+	background-color: var(--bg-gray);
+	color: var(--color-lighter);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+	text-align: center;
+}
+
+.hero {
+	background-color: var(--bg-light-gray);
+	width: 100%;
+	color: var(--color-lighter);
+	padding: 10px 0;
+}
+
+.hero h1 {
+	font-size: 48px;
+}
+
+.hero h2 {
+	font-size: 20px;
+}
+
+.main {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	padding-top: 5%;
+}
+
+.roll-result {
+	font-size: 48px;
+}
+
+.controls {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+}
+
+.controls input {
+	text-align: center;
+	font-size: 32px;
+}
+
+.controls button {
+	font-size: 24px;
+	padding: 4px;
+	border-radius: 0;
+	border: none;
+}
+
+footer {
+	background-color: var(--color-darker);
+	width: 100%;
+	padding: 4px;
+}
+
+footer a {
+	color: var(--color-light);
+	text-decoration: none;
+	transition: color 100ms, text-shadow 200ms;
+}
+
+footer a:hover {
+	color: var(--color-lighter);
+	text-shadow: 0px 0px 2px;
+	text-decoration: underline;
+}

@@ -3,6 +3,8 @@ import * as throwbone from 'throwbone';
 import pug from 'pug';
 
 const app: express.Application = express();
+// Serve files in the public folder
+app.use(express.static('public'));
 const port: number = 3000;
 
 const diceThrow = throwbone.rollDice("3");
